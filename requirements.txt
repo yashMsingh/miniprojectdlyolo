@@ -1,0 +1,29 @@
+# Python version requirement:
+# This project requires Python 3.9+
+# Recommended for best compatibility in 2026: Python 3.10 or 3.11
+
+# YOLOv8 framework (Ultralytics)
+ultralytics>=8.3.74,<9.0
+
+# OpenCV for webcam/video capture and drawing detections
+opencv-python>=4.11.0,<5.0
+
+# Core deep learning backend (keep torch/torchvision major-minor aligned)
+torch>=2.7.0,<2.8
+torchvision>=0.22.0,<0.23
+
+# Numerical operations and tensor-friendly arrays
+# Ultralytics 8.3.x currently requires numpy <= 2.1.1
+numpy>=2.1.0,<=2.1.1
+
+# Optional tabular analysis/log export support
+pandas>=2.2.3,<2.3
+
+# Image processing utilities
+pillow>=11.2.1,<12.0
+
+# Compatibility notes:
+# 1) torch/torchvision versions should stay aligned as above.
+# 2) On some systems with CUDA, install PyTorch from https://pytorch.org/get-started/locally/
+#    before running `pip install -r requirements.txt`.
+# 3) If OpenCV GUI windows fail on Linux servers, use opencv-python-headless instead.

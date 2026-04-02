@@ -1,0 +1,210 @@
+KEYBOARD CONTROLS - YOLOv8 REAL-TIME OBJECT DETECTION
+═════════════════════════════════════════════════════════════════════
+
+GENERAL CONTROL
+═══════════════
+
+  q  / ESC        Quit application
+  h               Show this help message
+  SPACE           Pause/resume detection
+
+
+DETECTION CONTROL
+═════════════════
+
+  +  / =          Increase confidence threshold (+0.05)
+  -  / _          Decrease confidence threshold (-0.05)
+  c               Reset threshold to default (0.5)
+  f               Open class filter menu
+
+
+CAPTURE & RECORDING
+═══════════════════
+
+  s               Save screenshot (PNG with timestamp)
+  r               Toggle video recording (MP4)
+               → Red REC indicator appears when recording
+               → Duration shown in top-right
+
+
+VISUALIZATION & DISPLAY
+════════════════════════
+
+  d               Toggle demo mode (enhanced visuals)
+               → Grid overlay
+               → Confidence-based color gradient
+               → Detected classes legend
+
+  p               Toggle performance panel display
+               → Show FPS, inference time, processing time
+               → Memory usage and optimization tips
+
+  t               Toggle threshold indicator display
+               → Shows current confidence threshold
+               → Shows filtered detections count
+
+
+STATISTICS & LOGGING
+═════════════════════
+
+  l               Show current detection log summary
+               → Total detections this session
+               → Average detections per frame
+               → Most/least detected classes
+
+  CTRL+E          Export current detection log manually
+               → Saved to outputs/detections/ folder
+               → Available as CSV and JSON
+
+
+VIEW ADJUSTMENTS
+═════════════════
+
+  .  / >          Increase display zoom (if available)
+  ,  / <          Decrease display zoom (if available)
+
+
+OBJECT COUNTING & FILTERING
+═════════════════════════════
+
+  CTRL+C          Display current object count
+               → Total: X | Person: Y | Car: Z | ...
+
+  f               Open class filter menu
+               → Press first letter of class (e.g., 'p' for person)
+               → Toggle individual classes on/off
+               → ESC returns to main detection
+
+
+═════════════════════════════════════════════════════════════════════
+
+FULL KEYBOARD REFERENCE (ALPHABETICAL)
+═══════════════════════════════════════
+
+c  Reset confidence threshold
+d  Demo mode toggle
+ESC  Quit application
+f  Class filter menu  
+h  Help/controls display
+l  Show log summary
+p  Performance panel toggle
+q  Quit application
+r  Recording toggle
+s  Screenshot capture
+SPACE  Pause/resume
+t  Threshold indicator toggle
++ / -  Adjust confidence threshold
+CTRL+E  Export detection logs
+CTRL+C  Show object count
+
+
+═════════════════════════════════════════════════════════════════════
+
+REAL-TIME FEATURES EXPLAINED
+═════════════════════════════
+
+📊 OBJECT COUNTING
+Display updates in real-time at bottom of frame:
+  Format: "Total: 5 | Person: 3 | Car: 2 | Dog: 0"
+
+🎚️ CONFIDENCE THRESHOLD
+Adjustable with +/- keys during runtime:
+  - Higher threshold → fewer detections (less false positives)
+  - Lower threshold → more detections (might include false positives)
+  - Display shows: "Confidence: 50%"
+
+🎬 VIDEO RECORDING
+Toggle with 'r' key:
+  - Press 'r' to START recording → 🔴 REC indicator appears
+  - Video saves to: outputs/videos/detected_TIMESTAMP.mp4
+  - Press 'r' to STOP recording
+  - Indicator disappears after stopping
+
+📸 SCREENSHOTS
+Capture with 's' key:
+  - Current frame saved as PNG
+  - Saved to: outputs/screenshots/detection_TIMESTAMP.png
+  - Includes bounding boxes and all annotations
+
+🎨 DEMO MODE (Press 'd')
+Enhanced visualization:
+  - Grid overlay for spatial reference
+  - Color gradient boxes (red=low conf, green=high conf)
+  - Detected classes legend in corner
+  - Professional appearance for demos
+
+⚡ PERFORMANCE PANEL (Press 'p')
+Shows system metrics:
+  - Current FPS (frames per second)
+  - Average inference time (ms)
+  - Processing time per frame
+  - Memory usage (if available)
+  - Optimization suggestions
+
+🔍 CLASS FILTERING (Press 'f')
+Detect only specific objects:
+  - Opens filter menu
+  - Press first letter of class name to toggle
+  - Examples: 'p' = person, 'c' = car, 'd' = dog
+  - Only enabled classes shown in detections
+  - ESC returns to main view
+
+📋 DETECTION LOGGING
+Automatic and manual:
+  - Automatic: Every detection logged to memory
+  - Export with CTRL+E or automatic export on exit
+  - Formats: CSV (spreadsheet) and JSON (data)
+  - Saved to: outputs/detections/
+
+📈 STATISTICS
+View anytime with 'l' key:
+  - Total objects detected
+  - Detections per frame (average)
+  - Most frequently detected class
+  - Session duration
+  - Performance metrics
+
+
+═════════════════════════════════════════════════════════════════════
+
+TIPS FOR SMOOTH OPERATION
+═════════════════════════
+
+• Start with default settings (confidence 0.5)
+• Use '+'/'-' to tune threshold for your environment
+• Enable demo mode for presentations/demos
+• Check performance panel if FPS drops
+• Review logs after session ends
+• Practice viva with practice_viva.py script
+• Read auto-generated assignment report for reference
+
+═════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+═══════════════
+
+Problem: FPS below 20
+Solution: Lower resolution in config.py, use demo mode less, reduce features
+
+Problem: Missed detections
+Solution: Lower confidence threshold with '-' key, check camera focus
+
+Problem: False positives (wrong detections)
+Solution: Raise confidence threshold with '+' key, use class filtering
+
+Problem: Video not recording
+Solution: Check outputs/videos/ has write permissions, check disk space
+
+Problem: Slow response to keypresses
+Solution: Close background apps, lower video resolution
+
+
+═════════════════════════════════════════════════════════════════════
+
+For detailed information about features and concepts, see:
+- README.md (project documentation)
+- data/viva_guide.py (viva preparation content)
+- practice_viva.py (interactive Q&A practice)
+
+Generated: Phase 3 Enhancement
+═════════════════════════════════════════════════════════════════════

@@ -1,0 +1,63 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+downloads/
+.eggs/
+*.egg-info/
+*.egg
+pip-wheel-metadata/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+logs/*.log
+*.log
+
+# Project outputs
+outputs/videos/*
+!outputs/videos/.gitkeep
+outputs/screenshots/*
+!outputs/screenshots/.gitkeep
+
+# Model artifacts / weights
+models/*.pt
+models/*.onnx
+models/*.engine
+!models/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Misc
+*.tmp
+*.bak
+*.swp
